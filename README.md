@@ -1,110 +1,54 @@
-🏘️ Tenant Matcher — AI-Powered Real Estate Matching Platform
+Tenant Matcher
 
-Tenant Matcher is a data-driven platform designed to intelligently match tenants (buyers/renters) with properties and agents using structured data, analytics, and machine learning.
+Tenant Matcher is a data-driven property matching system that helps users find rental properties based on their preferences and automatically sends matched listings via email.
 
-The system addresses a core real-estate problem:
-👉 finding the right tenant for the right property at the right time — efficiently and at scale.
-
-⸻
-
-🎯 Problem Statement
-
-Real-estate agents and property managers face challenges such as:
-	•	Fragmented buyer/tenant data
-	•	Manual lead qualification
-	•	Low-quality matches
-	•	Time-consuming outreach
-
-Tenant Matcher automates and optimizes this process using data engineering, analytics, and ML-ready pipelines.
+The system is designed to later evolve into an AI-powered chatbot for conversational property search.
 
 ⸻
 
-💡 Solution Overview
-
-Tenant Matcher:
-	•	Centralizes tenant and property data
-	•	Normalizes preferences, budgets, and locations
-	•	Matches tenants to properties using rules + ML scoring
-	•	Enables agents to discover high-intent, relevant leads
+🚀 Features
+	•	User input–based search (beds, baths, price range, amenities, location)
+	•	Dataset-driven property matching
+	•	Automated email delivery of matched properties
+	•	Frontend-first design with chatbot-ready backend logic
 
 ⸻
 
-🧠 Key Features
+🧠 How It Works
+	1.	User selects rental preferences from the frontend
+	2.	System filters a structured property dataset
+	3.	Best-matched properties are identified
+	4.	Results are emailed directly to the user
 
-1️⃣ Tenant & Property Profiling
-	•	Structured tenant profiles:
-	•	Budget
-	•	Location preferences
-	•	Property type
-	•	Move-in timeline
-	•	Property metadata:
-	•	Location
-	•	Price
-	•	Amenities
-	•	Availability
 
-2️⃣ Intelligent Matching Engine
-	•	Rule-based filtering (budget, city, ZIP, property type)
-	•	Scoring logic for match quality
-	•	Designed to evolve into ML-based ranking
 
-3️⃣ Data Engineering Pipeline
-	•	Clean separation of:
-	•	Raw ingestion
-	•	Processing & normalization
-	•	Matching logic
-	•	Scalable structure for future automation
 
-4️⃣ Analytics-Ready Design
-	•	Match insights for agents
-	•	Conversion and lead-quality analysis
-	•	Extendable to dashboards and reporting tools
 
-⸻
-
-🗂 Project Structure
-
-tenant-matcher/
-│
-├── data/
-│   ├── raw/              # Raw tenant & property data
-│   ├── processed/        # Cleaned and normalized datasets
-│
-├── src/
-│   ├── ingestion/        # Data ingestion logic
-│   ├── preprocessing/   # Cleaning & normalization
-│   ├── matching/        # Matching and scoring engine
-│   ├── analytics/       # Insights & evaluation
-│   ├── config.py        # Global configuration
-│
-├── notebooks/            # Exploratory analysis
+ Project Structure:
+ tenant-matcher/
+├── app.py                  # Main app
+├── matcher.py              # Matching logic
+├── email_utils.py          # Email utilities
+├── send_test_email.py      # Email testing
+├── tenant_units_demo.csv   # Property dataset
 ├── requirements.txt
-├── README.md
-└── .gitignore
+└── README.md
 
 
 
 Tech Stack
 	•	Python
-	•	Pandas / NumPy
-	•	SQL-ready data models
-	•	ML-ready feature pipelines
-	•	Modular architecture for scalability
+	•	Pandas
+	•	Streamlit
+	•	SMTP / Email services
+	•	dotenv
 
-git clone https://github.com/<your-username>/tenant-matcher.git
-cd tenant-matcher
-pip install -r requirements.txt
+Dependencies include streamlit, pandas, and python-dotenv  ￼
 
-python src/matching/run_matcher.py
+⸻
 
-
-
-
-Future Enhancements
-	•	Machine learning–based ranking models
-	•	Geographic distance scoring
-	•	LLM-powered tenant intent extraction
-	•	Agent dashboard (Streamlit / Power BI)
-	•	Token-based lead access model for agents
-
-
+🔮 Future Enhancements
+	•	Conversational AI chatbot (LLM-based)
+	•	ML-based recommendation ranking
+	•	Database integration (PostgreSQL / Cloud)
+	•	User accounts and saved searches
